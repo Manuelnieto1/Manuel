@@ -71,69 +71,15 @@
         .faq h3 { cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         .faq .respuesta { display: none; margin-top: 10px; }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-<header>
-<h1>La Pamperita</h1>
-<h2 style="font-size: 28px;">Módulos</h2>
-</header>
-
-<div class="carousel">
-<img alt="Módulo 1" src="imagen1.jpg"/>
-<img alt="Módulo 2" src="imagen2.jpg"/>
-<img alt="Módulo 3" src="imagen3.jpg"/>
-</div><div class="producto" style="text-align:left; width:90%; max-width:800px; margin: 10px auto;"><h3>Módulo Habitable</h3><div class="precio">US$ 10.000</div></div>
-<div class="descripcion">
-<p>Este módulo habitable está diseñado para brindar comodidad, eficiencia y estilo. Ideal para viviendas, oficinas móviles o espacios de descanso, cuenta con materiales de alta calidad y excelente aislación térmica.</p>
-<a class="boton-wsp" href="https://wa.link/0442xk">CONSULTAR DISPONIBILIDAD</a>
-</div>
-<div class="por-que">
-<h2>¿Por qué elegirnos?</h2>
-<p>Ofrecemos módulos con excelente calidad, terminaciones prolijas, entrega rápida y atención personalizada.</p>
-</div>
-<div class="sobre-nosotros">
-<h2>Sobre nosotros</h2>
-<p>La Pamperita es una marca dedicada a crear módulos habitables modernos, duraderos y pensados para la comodidad del usuario. Contamos con años de experiencia en la construcción modular.</p>
-</div>
-<div class="faq">
-<h2>Preguntas frecuentes</h2>
-<div>
-<h3 onclick="toggleFaq(this)">¿Cuánto tarda la entrega? <span>▼</span></h3>
-<div class="respuesta">La entrega demora entre 15 y 30 días dependiendo de la demanda.</div>
-</div>
-<div>
-<h3 onclick="toggleFaq(this)">¿Se puede personalizar? <span>▼</span></h3>
-<div class="respuesta">Sí, ofrecemos opciones de personalización según tus necesidades.</div>
-</div>
-<div>
-<h3 onclick="toggleFaq(this)">¿Cuáles son las formas de pago? <span>▼</span></h3>
-<div class="respuesta">Aceptamos transferencias, tarjetas y pagos en cuotas.</div>
-</div>
-</div>
-<footer>
-<p>Seguinos en Facebook e Instagram</p>
-<p>Dirección del taller</p>
-<p>Teléfono: 2392492429</p>
+        
+<footer style="text-align: center; padding: 40px 20px; background-color: #f2f2f2;">
+  <h3>NUESTRAS REDES SOCIALES</h3>
+  <div style="font-size: 24px; margin-bottom: 20px;">
+    <a href="https://www.facebook.com/" target="_blank" style="margin: 0 10px;">&#xf09a;</a>
+    <a href="https://www.instagram.com/" target="_blank" style="margin: 0 10px;">&#xf16d;</a>
+  </div>
+  <h3>CONTACTO</h3>
+  <p style="margin: 5px 0;">&#9993; casanietotl@gmail.com</p>
+  <p style="margin: 5px 0;">&#128222; 2392492429</p>
+  <p style="margin: 5px 0;">&#128205; Saavedra 80, Trenque Lauquen, Buenos Aires</p>
 </footer>
-<script>
-        function toggleFaq(element) {
-            const respuesta = element.nextElementSibling;
-            const flecha = element.querySelector("span");
-            const abierta = respuesta.style.display === "block";
-            document.querySelectorAll(".faq .respuesta").forEach(r => r.style.display = "none");
-            document.querySelectorAll(".faq h3 span").forEach(f => f.textContent = "▼");
-            if (!abierta) {
-                respuesta.style.display = "block";
-                flecha.textContent = "▲";
-            }
-        }
-    </script>
-</body>
-</html>
