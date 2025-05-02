@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>La Pamperita Módulos</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f8f8; }
+    header {
+        background-image: url('fondo.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        position: relative;
+    }
+    header::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    header h1, header h2 {
+        position: relative;
+        z-index: 2;
+    }
+    header h1 { font-size: 48px; margin: 0; }
+    header h2 { font-size: 28px; margin-top: 10px; }
+
+    .carousel-descripcion {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 800px;
+    }
+
+    .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .carousel img {
+        height: 200px;
+        scroll-snap-align: start;
+        border-radius: 10px;
+    }
+
+    .producto h3 { font-size: 20px; margin: 10px 0 5px 0; }
+    .precio { font-size: 16px; color: black; }
+
+    .descripcion p {
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    .boton-wsp-flotante {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: green;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .por-que, .sobre-nosotros, .faq {
+        padding: 20px;
+        background: white;
+        margin: 10px auto;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 10px;
+    }
+
+    .faq h3 { cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq .respuesta { display: none; margin-top: 10px; }
+
+    footer {
+        background: #f2f2f2;
+        color: #000;
+        padding: 30px 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-section h3 {
+        margin-bottom: 10px;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    .footer-section img {
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    .footer-section p {
+        line-height: 1.6;
+    }
+
+    .espaciador-footer {
+        height: 80px; /* Espacio para que se vea el footer detrás del botón flotante */
+    }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>La Pamperita</h1>
+  <h2>Módulos</h2>
+</header>
+
+<div class="carousel-descripcion">
+  <div class="carousel">
+    <img src="imagen1.jpg" alt="Módulo 1">
+    <img src="imagen2.jpg" alt="Módulo 2">
+    <img src="imagen3.jpg" alt="Módulo 3">
+  </div>
+  <div class="producto">
+    <h3>Módulo Habitable</h3>
+    <div class="precio">US$ 10.000</div>
+  </div>
+  <div class="descripcion">
+    <p>Este módulo habitable está diseñado para brindar comodidad, eficiencia y estilo. Ideal para viviendas, oficinas móviles o espacios de descanso, cuenta con materiales de alta calidad y excelente aislación térmica.</p>
+  </div>
+</div>
+
+<a class="boton-wsp-flotante" href="https://wa.link/0442xk">CONSULTAR DISPONIBILIDAD</a>
+
+<div class="por-que">
+  <h2>¿Por qué elegirnos?</h2>
+  <p>Ofrecemos módulos con excelente calidad, terminaciones prolijas, entrega rápida y atención personalizada.</p>
+</div>
+
+<div class="sobre-nosotros">
+  <h2>Sobre nosotros</h2>
+  <p>La Pamperita es una marca dedicada a crear módulos habitables modernos, duraderos y pensados para la comodidad del usuario. Contamos con años de experiencia en la construcción modular.</p>
+</div>
+
+<div class="faq">
+  <h2>Preguntas frecuentes</h2>
+  <div>
+    <h3 onclick="toggleFaq(this)">¿Cuánto tarda la entrega? <span>▼</span></h3>
+    <div class="respuesta">La entrega demora entre 15 y 30 días dependiendo de la demanda.</div>
+  </div>
+  <div>
+    <h3 onclick="toggleFaq(this)">¿Se puede personalizar? <span>▼</span></h3>
+    <div class="respuesta">Sí, ofrecemos opciones de personalización según tus necesidades.</div>
+  </div>
+  <div>
+    <h3 onclick="toggleFaq(this)">¿Cuáles son las formas de pago? <span>▼</span></h3>
+    <div class="respuesta">Aceptamos transferencias, tarjetas y pagos en cuotas.</div>
+  </div>
+</div>
+
+<div class="espaciador-footer"></div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>NUESTRAS REDES SOCIALES</h3>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook" width="24"></a>
+        <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram" width="24"></a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>CONTACTO</h3>
+      <p>
+        <img src="email-icon.png" alt="Email" width="16"> oteinsa@gmail.com<br>
+        <img src="phone-icon.png" alt="Teléfono" width="16"> 2392492429<br>
+        <img src="location-icon.png" alt="Dirección" width="16"> Saavedra 80, Trenque Lauquen, Buenos Aires
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(element) {
+    const respuesta = element.nextElementSibling;
+    const flecha = element.querySelector("span");
+    const abierta = respuesta.style.display === "block";
+    document.querySelectorAll(".faq .respuesta").forEach(r => r.style.display = "none");
+    document.querySelectorAll(".faq h3 span").forEach(f => f.textContent = "▼");
+    if (!abierta) {
+      respuesta.style.display = "block";
+      flecha.textContent = "▲";
+    }
+  }
+</script>
+</body>
+</html>
