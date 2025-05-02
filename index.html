@@ -56,18 +56,16 @@
         line-height: 1.6;
     }
     .boton-wsp {
-        position: relative;
-        margin: 20px auto;
+        display: block;
         background-color: green;
         color: white;
         padding: 15px 30px;
         border-radius: 10px;
         font-weight: bold;
         text-decoration: none;
-        display: block;
-        width: 200px;
         text-align: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        margin: 20px auto;
+        max-width: 300px;
     }
     .por-que, .sobre-nosotros, .faq {
         padding: 20px;
@@ -90,6 +88,8 @@
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
+        max-width: 800px;
+        margin: 0 auto;
     }
     .footer-section {
         margin-bottom: 20px;
@@ -98,7 +98,7 @@
         margin-bottom: 10px;
     }
     .social-icons a {
-        margin: 0 10px;
+        margin: 0 10px 0 0;
         display: inline-block;
     }
     .footer-section img {
@@ -125,14 +125,15 @@
     <img src="https://lapamperita.com.ar/imagen3.jpg" alt="Módulo 3">
   </div>
   <div class="producto">
-    <h3>Módulo Habitable</h3>
+    <h3>Módulo Habitable Planta Libre</h3>
     <div class="precio">US$ 10.000</div>
   </div>
   <div class="descripcion">
     <p>Este módulo habitable está diseñado para brindar comodidad, eficiencia y estilo. Ideal para viviendas, oficinas móviles o espacios de descanso, cuenta con materiales de alta calidad y excelente aislación térmica.</p>
   </div>
+  <!-- El botón de WhatsApp ya no es flotante y está debajo de la descripción -->
+  <a class="boton-wsp" href="https://wa.link/0442xk">CONSULTAR DISPONIBILIDAD</a>
 </div>
-<a class="boton-wsp" href="https://wa.link/0442xk">CONSULTAR DISPONIBILIDAD</a>
 <div class="por-que">
   <h2>¿Por qué elegirnos?</h2>
   <p>Ofrecemos módulos con excelente calidad, terminaciones prolijas, entrega rápida y atención personalizada.</p>
@@ -162,16 +163,16 @@
     <div class="footer-section">
       <h3>NUESTRAS REDES SOCIALES</h3>
       <div class="social-icons">
-        <a href="https://facebook.com/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/facebook.png" alt="Facebook" width="24"></a>
-        <a href="https://instagram.com/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" width="24" style="border: 2px solid black; border-radius: 50%; padding: 5px; background-color: white;"></a>
+        <a href="https://facebook.com/" target="_blank"><img src="https://lapamperita.com.ar/facebook-icon.png" alt="Facebook" width="24"></a>
+        <a href="https://instagram.com/" target="_blank"><img src="https://lapamperita.com.ar/instagram-icon.png" alt="Instagram" width="24"></a>
       </div>
     </div>
     <div class="footer-section">
       <h3>CONTACTO</h3>
       <p>
-        <img src="https://img.icons8.com/ios-filled/50/000000/mail.png" alt="Correo" width="16"> oteinsa@gmail.com<br>
-        <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Teléfono" width="16"> 2392492429<br>
-        <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Dirección" width="16"> Saavedra 80, Trenque Lauquen, Buenos Aires
+        <img src="https://lapamperita.com.ar/email-icon.png" alt="Email" width="16"> oteinsa@gmail.com<br>
+        <img src="https://lapamperita.com.ar/phone-icon.png" alt="Teléfono" width="16"> 2392492429<br>
+        <img src="https://lapamperita.com.ar/location-icon.png" alt="Dirección" width="16"> Saavedra 80, Trenque Lauquen, Buenos Aires
       </p>
     </div>
   </div>
