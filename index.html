@@ -157,20 +157,50 @@
   <div class="producto">
     <h3>Módulo Habitable</h3>
   </div>
-    <div style="display: flex; justify-content: flex-end; gap: 16px; align-items: center; margin-top: 20px;">
+<div style="display: flex; align-items: flex-start; gap: 15px; margin-top: 20px;">
   <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="BTC" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-    <span style="font-size: 14px; font-weight: 500;">0.000105</span>
+    <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=030" alt="BTC" style="width: 40px; height: 40px; border-radius: 50%;">
+    <span style="font-weight: bold;">BTC</span>
   </div>
   <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-    <span style="font-size: 14px; font-weight: 500;">0.00191</span>
+    <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=030" alt="ETH" style="width: 40px; height: 40px; border-radius: 50%;">
+    <span style="font-weight: bold;">ETH</span>
   </div>
   <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-    <span style="font-size: 14px; font-weight: 500;">7.15</span>
+    <img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=030" alt="USDT" style="width: 40px; height: 40px; border-radius: 50%;">
+    <span style="font-weight: bold;">USDT</span>
   </div>
-    </div>
+</div>
+
+<div id="precio-cripto" style="text-align:left; margin-top:10px; font-weight:bold; font-size:18px;">
+  Cargando precios en BTC / ETH / USDT...
+</div>
+
+<script>
+  async function actualizarPrecioCripto() {
+    try {
+      const response = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether&vs_currencies=usd");
+      const data = await response.json();
+
+      const usdBase = 10000;
+
+      const btc = (usdBase / data.bitcoin.usd).toFixed(6);
+      const eth = (usdBase / data.ethereum.usd).toFixed(6);
+      const usdt = (usdBase / data.tether.usd).toFixed(2);
+
+      document.getElementById("precio-cripto").innerHTML = `
+        <p>🔸 <strong>${btc} BTC</strong></p>
+        <p>🔸 <strong>${eth} ETH</strong></p>
+        <p>🔸 <strong>${usdt} USDT</strong></p>
+        <p style="font-size:14px; color:gray;">(Cotización en tiempo real vía CoinGecko)</p>
+      `;
+    } catch (error) {
+      document.getElementById("precio-cripto").innerText = "Error al cargar el precio en cripto.";
+    }
+  }
+
+  actualizarPrecioCripto();
+</script>
   <div class="descripcion">
     <p>Este módulo habitable está diseñado para brindar comodidad, eficiencia y estilo. Ideal para viviendas, oficinas móviles o espacios de descanso, cuenta con materiales de alta calidad y excelente aislación térmica.</p>
   </div>
